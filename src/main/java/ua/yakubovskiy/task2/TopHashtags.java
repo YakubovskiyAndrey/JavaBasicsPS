@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class TopHashtags {
     public Map<String, Long> chooseTop(List<String> lines){
+        if(lines == null) throw new NullPointerException("list must not be null");
         if(lines.isEmpty()) throw new IllegalArgumentException("list must not be empty");
         Map<String, Long> result = new LinkedHashMap<>();
         lines.stream()

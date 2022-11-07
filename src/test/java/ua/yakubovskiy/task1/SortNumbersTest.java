@@ -31,6 +31,11 @@ class SortNumbersTest {
     }
 
     @Test
+    void whenListIsNull(){
+        assertThrows(NullPointerException.class, () -> sortNumbers.sorting(null));
+    }
+
+    @Test
     void whenOnlyOneValue(){
         List<Integer> numbers = new ArrayList<>();
         numbers.add(5);

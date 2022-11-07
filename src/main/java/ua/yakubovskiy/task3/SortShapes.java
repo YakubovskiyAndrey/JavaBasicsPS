@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class SortShapes {
     public List<Shape> sorting(List<Shape> shapes){
+        if(shapes == null) throw new NullPointerException("list must not be null");
         if(shapes.isEmpty()) throw new IllegalArgumentException("list must not be empty");
         return shapes.stream().
                 sorted(Comparator.comparingInt(Shape::getVolume)).collect(Collectors.toList());

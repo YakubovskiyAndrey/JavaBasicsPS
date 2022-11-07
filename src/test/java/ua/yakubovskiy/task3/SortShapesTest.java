@@ -25,6 +25,11 @@ class SortShapesTest {
     }
 
     @Test
+    void whenListIsNull(){
+        assertThrows(NullPointerException.class, () -> sortShapes.sorting(null));
+    }
+
+    @Test
     void whenListIsNotEmpty(){
         List<Shape> shapes = new ArrayList<>();
         shapes.add(new Cylinder(5));

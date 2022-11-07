@@ -21,6 +21,11 @@ class TopHashtagsTest {
     }
 
     @Test
+    void whenListIsNull(){
+        assertThrows(NullPointerException.class, () -> topHashtags.chooseTop(null));
+    }
+
+    @Test
     void getTop5Hashtags(){
         List<String> lines = new ArrayList<>();
         lines.add("-1");
