@@ -8,7 +8,8 @@ import ua.yakubovskiy.task3.entity.Cylinder;
 import ua.yakubovskiy.task3.entity.Shape;
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SortShapesTest {
 
