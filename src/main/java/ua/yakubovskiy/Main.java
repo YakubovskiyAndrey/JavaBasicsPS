@@ -59,11 +59,12 @@ public class Main {
 
     public static void task3(){
         List<Shape> shapes = new ArrayList<>();
-        shapes.add(new Cylinder(5));
-        shapes.add(new Circle(10));
-        shapes.add(new Cube(9));
+        shapes.add(new Cylinder(5.5, 8));
+        shapes.add(new Circle(10.2));
+        shapes.add(new Cube(9.1));
         SortShapes sortShapes = new SortShapes();
         List<Shape> resultShapes = sortShapes.sorting(shapes);
         resultShapes.forEach(System.out::println);
     }
+
 }

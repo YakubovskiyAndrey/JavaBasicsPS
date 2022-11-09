@@ -11,7 +11,7 @@ public class SortShapes {
         if(shapes == null) throw new NullPointerException("list must not be null");
         if(shapes.isEmpty()) throw new IllegalArgumentException("list must not be empty");
         return shapes.stream().
-                sorted(Comparator.comparingInt(Shape::getVolume)).collect(Collectors.toList());
+                sorted(Comparator.comparingDouble(Shape::getVolume)).collect(Collectors.toList());
     }
 
 }

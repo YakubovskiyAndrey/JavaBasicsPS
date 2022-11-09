@@ -1,21 +1,27 @@
 package ua.yakubovskiy.task3.entity;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Circle implements Shape{
 
-    private final int volume;
+    private final double radius;
 
-    public Circle(int volume) {
-        this.volume = volume;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public int getVolume() {
-        return volume;
+    public double getVolume() {
+        double result = (4 * Math.PI * Math.pow(radius, 3)) / 3;
+        return BigDecimal.valueOf(result)
+                .setScale(2, RoundingMode.HALF_DOWN)
+                .doubleValue();
     }
 
     @Override
     public String toString() {
         return "Circle{" +
-                "volume=" + volume +
+                "volume=" + getVolume() +
                 '}';
     }
 }

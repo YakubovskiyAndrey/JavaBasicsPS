@@ -1,21 +1,27 @@
 package ua.yakubovskiy.task3.entity;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Cube implements Shape{
 
-    private final int volume;
+    private final double height;
 
-    public Cube(int volume) {
-        this.volume = volume;
+    public Cube(double height) {
+        this.height = height;
     }
 
-    public int getVolume() {
-        return volume;
+    public double getVolume() {
+        double result = Math.pow(height, 3);
+        return BigDecimal.valueOf(result)
+                .setScale(2, RoundingMode.HALF_DOWN)
+                .doubleValue();
     }
 
     @Override
     public String toString() {
         return "Cube{" +
-                "volume=" + volume +
+                "volume=" + getVolume() +
                 '}';
     }
 }

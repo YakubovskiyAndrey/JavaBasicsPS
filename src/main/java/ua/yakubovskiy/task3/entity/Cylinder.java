@@ -1,21 +1,30 @@
 package ua.yakubovskiy.task3.entity;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Cylinder implements Shape{
 
-    private final int volume;
+    private final double radius;
 
-    public Cylinder(int volume) {
-        this.volume = volume;
+    private final double height;
+
+    public Cylinder(double radius, double height) {
+        this.height = height;
+        this.radius = radius;
     }
 
-    public int getVolume() {
-        return volume;
+    public double getVolume() {
+        double result = Math.PI * radius * radius * height;
+        return BigDecimal.valueOf(result)
+                .setScale(2, RoundingMode.HALF_DOWN)
+                .doubleValue();
     }
 
     @Override
     public String toString() {
         return "Cylinder{" +
-                "volume=" + volume +
+                "volume=" + getVolume() +
                 '}';
     }
 }
