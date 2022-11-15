@@ -34,7 +34,8 @@ public class Main {
         List<String> lines = new ArrayList<>();
         lines.add("-1");
         lines.add("#tt");
-        lines.add("#t#e");
+        lines.add("tt #fh# #fh# #fh#");
+        lines.add("#fh#");
         lines.add("rr");
         lines.add("#r");
         lines.add("#r");
@@ -42,8 +43,6 @@ public class Main {
         lines.add("#y");
         lines.add("#y");
         lines.add("#y");
-        lines.add("#i");
-        lines.add("#h");
         lines.add("#n");
         lines.add("#i");
         lines.add("#tt");

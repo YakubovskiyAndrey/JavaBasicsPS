@@ -71,9 +71,10 @@ class TopHashtagsTest {
         List<String> lines = new ArrayList<>();
         lines.add("ff");
         lines.add("bb");
+        lines.add("ff #b#b #b#b #b#b");
+        lines.add("ff #b#b");
         lines.add("#b#b");
-        lines.add("#b#b");
-        assertEquals("{#b#b=2}",
+        assertEquals("{#b#b=3}",
                 topHashtags.chooseTop(lines).toString());
     }
 }
